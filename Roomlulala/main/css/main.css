@@ -1,0 +1,109 @@
+@import url("common.css");
+
+/* 검색바 */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 50px auto 70px auto;
+}
+
+.search input {
+    flex: 1;
+    border: var(--gray-color);
+    border-radius: 8px;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--gray-color);
+}
+
+.search input:hover {
+    background-color: rgb(187, 187, 187);
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search button {
+    margin-left: 10px;
+    background-color: var(--nav-color);
+    display: flex;
+    align-items: center;
+    border: var(--nav-color);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(80, 80, 80, 0.3);
+    text-align: center;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background-color: rgb(88, 88, 88);
+}
+
+/* 컨텐츠들 */
+.contents-title{
+    font-family: 'Poor Story', cursive;
+    padding: 30px;
+    margin-left: 130px;
+    margin-top: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 150px;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: rgb(75, 75, 75);
+    /* background-color: var(--blue-color); */
+    /* background-image: url('img/머니머니패키지.jpg'); */
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* 카드의 높이값 */
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+.card p{
+    font-family: 'Poor Story', cursive;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover{
+    background-color: #000000;
+}
+.card img:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 1350px) {
+    .card p {
+        font-size: 17px;
+    }
+}
+
+

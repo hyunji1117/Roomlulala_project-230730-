@@ -1,0 +1,137 @@
+@import url(./common.css);
+
+/* 로그인 페이지 */
+.login-container {
+  font-family: 'Poor Story', cursive;
+    width: 400px;
+    margin: 110px auto;
+    padding: 42px;
+    background-color: #fffad2;
+    border: 1px solid #ccc;
+    border-radius: 400px;
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    text-align: center;
+  }
+  
+  .login-container h2 strong{
+    color:rgb(171, 146, 8);
+  }
+  
+  .form-group {
+    margin-bottom: 13px;
+  }
+  
+  
+  label {
+    display: block;
+    color: gray;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--nav-color);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--point-color);
+    color: black;
+  }
+
+  .login-container .actions{
+    display: flex;
+  }
+
+  .login-container .actions a{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    text-decoration: none;
+  }
+  .login-container .actions a:last-child {
+    border-right: none;
+}
+.login-container .actions a:hover {
+  text-decoration: underline;
+}
+
+  /* 소셜 로그인 */
+  .social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .social-login-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .social-login-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .social-login-btn i {
+    font-size: 20px;
+  }
+  
+  .facebook {
+    color: #3b5998;
+  }
+  
+  .google {
+    color: #db4437;
+  }
+  
+  .twitter {
+    color: #1da1f2;
+  }
+
+  #login-error-msg {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    font-size: 18px;
+    color: #8a0000;
+    border: 1px solid #b96b6b;
+    background-color: #ffa9a9;
+    opacity: 0;
+  }

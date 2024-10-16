@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        .listBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .listInner {
+            display: flex;
+            background-color: #dedede;
+            width: 500px;
+            margin: 10px 5px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .listInner span {
+            padding-right: 20px;
+        }
+
+        .roomName {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="search">
+            <input type="text" id="search" onkeyup="filter()" placeholder="방탈출 카페 이름이나 테마를 검색하세요." />
+            <button class="btn_search">검색</button>
+        </div>
+        <div class="listBox">
+            <div class="listInner">
+                <span class="roomName">코끼리</span>
+                <span class="theme">호러</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">고양이</span>
+                <span class="theme">미스터리</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">졸리다</span>
+                <span class="theme">스릴러</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">하품</span>
+                <span class="theme">판타지</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">갓생살자</span>
+                <span class="theme">코믹</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">프론트엔드개발자</span>
+                <span class="theme">잠입</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">프로젝트</span>
+                <span class="theme">감성</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">자취하고싶은마이크</span>
+                <span class="theme">호러</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">리더사비</span>
+                <span class="theme">코믹</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">최고의팀워크</span>
+                <span class="theme">힐링</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">일요일강남역</span>
+                <span class="theme">판타지</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">오후4시</span>
+                <span class="theme">어드벤쳐</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">삼성주식</span>
+                <span class="theme">스릴러</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">테슬라급등</span>
+                <span class="theme">호러</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">로직게임</span>
+                <span class="theme">미스터리</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">의식의흐름</span>
+                <span class="theme">코믹</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">일러스트페어</span>
+                <span class="theme">감성</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">진짜방탈출</span>
+                <span class="theme">힐링</span>
+            </div>
+            <div class="listInner">
+                <span class="roomName">아이패딩</span>
+                <span class="theme">스릴러</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function filter() {
+            let search = document.getElementById("search").value.toLowerCase();
+            let listInner = document.getElementsByClassName("listInner");
+
+            for (let i = 0; i < listInner.length; i++) {
+                let theme = listInner[i].getElementsByClassName("theme")[0];
+                let roomName = listInner[i].getElementsByClassName("roomName")[0];
+
+                if (
+                    theme.textContent.toLowerCase().indexOf(search) !== -1 ||
+                    roomName.textContent.toLowerCase().indexOf(search) !== -1
+                ) {
+                    listInner[i].style.display = "flex";
+                } else {
+                    listInner[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+<footer>
+    <small>방탈출 정보 제공 사이트 - Room Lu LaLa</small>
+</footer>
+
+</html>

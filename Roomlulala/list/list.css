@@ -1,0 +1,296 @@
+/* @import "reset.css"; */
+@import url(list.css);
+
+
+:root {
+    --nav-color: #90E0EF;
+    --gray-color: #D9D9D9;
+    --point-color: #9381FF;
+    --white-color: #f1faee;
+    --blue-color: #CAF0F8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+header {
+    height: 50px;
+    padding: 1rem;
+    color: black;
+    background: #474747;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    min-width: 960px;
+}
+
+body {
+  padding-top: 80px;
+  min-width: 960px;
+}
+
+/* nav */
+.nav {
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: white;
+  /*2px 2px 2px rgba(134, 134, 134, 0.5);*/
+}
+
+.nav li {
+  float: left;
+  padding: 30px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav li a:hover {
+  color: rgb(238, 238, 238);
+  text-shadow: 2px 2px 2px #969696;
+}
+
+.profile{
+  padding-right: 50px;
+  color: white;
+}
+
+.profile a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile i {
+  font-size: 30px;
+  text-shadow: 2px 2px 3px rgba(175, 175, 175, 0.3);
+}
+
+.profile i:hover {
+  color: rgb(238, 238, 238);
+  text-shadow: 2px 2px 2px #969696;
+}
+
+/* 검색바 */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin: 50px auto 30px auto;
+}
+
+.search input {
+  flex: 1;
+  border: var(--gray-color);
+  border-radius: 8px;
+  padding: 14px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--gray-color);
+  box-shadow: 0px 5px 0px 0px #727272;
+}
+
+.search input:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search .btn_search{
+  /* padding: 0 20px;
+  margin: 0 0 0 15px;
+  border: 1px solid #fcc419;
+  border-radius: 8px;
+  height: 49px;
+  color: #5b5b5b;
+  font-size: 25px;
+  background-color: var(--nav-color);
+  text-shadow: 2px 2px 3px rgba(80, 80, 80, 0.3);
+  text-align: center;
+  cursor: pointer; */
+  display: block;
+  position: relative;
+  float: left;
+  width: 80px;
+  padding: 0;
+  margin: 0 0 0 15px;
+  text-align: center;
+  line-height: 47px;
+  color: /*#FFF;*/#474747;
+  font-weight: bold 600;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  box-shadow: 0px 5px 0px 0px #A66615;
+}
+
+.search .btn_search {
+  box-shadow: 0px 5px 0px 0px #A66615;
+}
+
+.btn_search:hover {
+  margin-top: 10px; /* 15px */
+  margin-bottom: -10px;
+}
+
+.search .btn_search:hover {
+  background-color: #fcc419;
+  box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+
+/* .search .btn_search:hover{
+  background-color: #ffe28b;
+} */
+
+
+
+
+
+/* filter-btn */
+.btn-container{
+  display: flex;
+  justify-content: center;
+  border: 0 none;
+}
+
+button, .filter-btn{
+  margin: 10px 20px 0;
+  padding: 10px 30px;
+  /* color:white; */
+  font-size: 100%;
+  background-color: #FFD966;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+button, .filter-btn{
+  border: 1.5px solid;
+  border-color: #fcc419;
+  color: rgb(57, 56, 56);
+}
+
+button:hover, .filter-btn{
+  border: 1.5px solid /*#22b8cf*/#feb477;
+  background: /*#66d9e8*//*#fc913a;*/#FFD966;
+}
+
+/* button,  */.filter-btn:hover{
+  color: black;
+  border: 1.5px solid /*#22b8cf*/#f9892c;
+  background: /*#66d9e8*//*#fc913a;*/#fcc419;
+  text-shadow: 2px 2px 2px rgba(134, 134, 134, 0.5);
+}
+
+
+/* 방탈출 소개 리스트 */
+.section-center{
+  margin: 30px 100px 50px 100px;
+  padding: 30px 100px 30px 100px;
+  background-color: #ebebeb;
+  border-radius: 0.3rem;
+}
+
+.photo{
+  width: 400px;
+  height: 260px;
+  border-radius: 1.4rem;
+}
+
+/* 별점 ⭐️⭐️⭐️⭐️⭐️ */
+@import 
+url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.rate {
+  display: inline-block;
+  border: 0;
+  margin-right: 15px;}
+
+.rate > input {
+  display: none;}
+
+.rate > label {
+  float: right;color: #ddd}
+
+.rate > label:before {
+  display: inline-block;
+  font-size: 2rem;
+  padding: .3rem .2rem;
+  margin: 0;
+  cursor: pointer;
+  font-family: FontAwesome;
+  content: "\f005 ";}
+
+.rate .half:before {
+  content: "\f089 ";
+  position: absolute;
+  padding-right: 0;}
+
+.rate input:checked ~ label, 
+.rate label:hover,.rate label:hover ~ label { color: 	#474747 !important;  } 
+.rate input:checked + .rate label:hover,
+.rate input input:checked ~ label:hover,
+.rate input:checked ~ .rate label:hover ~ label,  
+.rate label:hover ~ input:checked ~ label { color:	#474747 !important;  } 
+
+/* 방탈출 소개 리스트 */
+.room-list{
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+  padding: 15px 0 15px 0;
+}
+
+.room-info{
+  margin-left: 30px ;
+  padding: 17px 30px 30px 30px;
+  font-family:Arial, Helvetica, sans-serif;
+  border-radius: 1.4rem;
+  border-color: #fd7d15;
+  background-color: #fff;
+}
+
+fieldset, .rate {
+  margin: 5px 0;
+  padding:  0 0 10px 0;
+}
+
+.roominfo-tex{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hash-btn{
+  margin-top: 20px;
+}
+
+.hash{
+  border: 1px #8c8a8a;
+  border-radius: 0.7rem;
+  background-color: #ebebeb;
+  padding: 5px 10px;
+  margin: 3px;  
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+section{
+  margin: 0 65px;
+  padding: 0 30px;
+}
